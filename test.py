@@ -104,19 +104,136 @@
 
 
 
-print("BIENVENIDO A LA SUCURSAL")
+# print("BIENVENIDO A LA SUCURSAL")
 
-direccion=input("ud pertenece a la comuna de la florida?")
+# direccion=input("ud pertenece a la comuna de la florida?")
 
-if direccion == "si":
-    print("puede continuar a la siguiente")
+# if direccion == "si":
+#     print("puede continuar a la siguiente")
     
     
-carnet=input("ud tiene carnet de socio?")
+# carnet=input("ud tiene carnet de socio?")
 
-if carnet =="si":
-    print=int(input("ingrese su numero de carnet"))
+# if carnet =="si":
+#     print=int(input("ingrese su numero de carnet"))
     
     
+#---------practica clase del 08 SENTENCIA "FOR"------------
+
+# for i in range(3):
+    # print("saludo",i+1)
+    
+ 
+ 
+ 
+# -------------tablas para modificar-----------   
+# num=7 
+# for i in range(10):
+    # print(num ,"x",i+1,"=",(i+1)*num) 
+    
+ 
+#  ----------tabla del 1 al 10------------
+
+# for i in range(1,11):
+#     print("tabla de",i)
+#     for j in range(1,11):
+#         print(i, "X", j, "=", i*j)
+
+    
+ 
+#  USTED TIENE [CANTIDAD DE AÑOS] AÑOS
+ 
+
+ 
+# for cantidad_años in range(1,24): 
+#     print("usted tiene", cantidad_años, "años")
+    
 
 
+ 
+    #-----promediar notas----
+# total=0
+    
+# for i in range(3):
+#     print("Ingrese una nota")
+#     nota=+int(input())
+#     total=total+nota
+#     print("su promedio es: ", total/(i+1))
+
+
+
+# -----------verificacion de numero par o impar----------
+
+
+
+# num=int(input("ingrese un numero"))
+# for i in range(num+1):
+#     if i%2!=0:
+#         print("el numero no es par ",i)
+
+
+
+# -------para saber cuantas caracteres tiene un texto------
+
+# pal="Hola soy milo"
+# print(len(pal))
+
+# for i in pal:
+#     print(i)
+    
+    
+# total=0
+# nombre=input("ingrese un nombre")
+# for i in range(len(nombre)):
+#     total=total+(i+1)
+# print("el total de la suma de sus numeros es: ", total)
+    
+
+    
+    
+# lista_numeros = [55,79,4,5,6,7,8]
+
+
+# for valor in lista_numeros:
+#     print(valor)
+    
+    
+    
+# passw=1234
+
+# for i in range(3):
+#     pas=int(input("ingrese una contraseña"))
+#     if pas==passw:
+#         print("bienvenido")
+#         break
+#     else:
+#         print("ha fallado nuevamente")
+# else:
+        
+#         print("no ha podido ingresar, error")
+
+
+num=64
+
+for i in range(5):
+    cont=(1,5)
+    num=int(input("ingrese el numero desconocido"))
+if num<=64:
+    print("su numero es muy bajo")
+if num>=64:
+    print("su numero es muy alto")
+elif num==64:
+    print("FELICIDADES!")
+else:
+    print("intente nuevamente")
+
+        
+        
+        
+
+# if contraseña==1234:
+#     print("ha ingresado con exito la contraseña")
+
+#     for contraseña in range(3):
+# else:
+#         print("error intentelo nuevamente")
