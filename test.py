@@ -213,22 +213,20 @@
 #         print("no ha podido ingresar, error")
 
 
-num=64
+# num=64
 
-for i in range(5):
-    cont=(1,5)
-    num=int(input("ingrese el numero desconocido"))
-if num<=64:
-    print("su numero es muy bajo")
-if num>=64:
-    print("su numero es muy alto")
-elif num==64:
-    print("FELICIDADES!")
-else:
-    print("intente nuevamente")
-
-        
-        
+# for i in range(3):
+#   cont=int(input("ingrese su numero"))
+#   if cont==num:
+#       print("su numero es correcto el numero es: ", num)
+#       break
+#       if cont>num:
+#           print("el numero es mayor, baje un poco mas")
+#       if cont<num:
+#             print("su numero es menor, suba un poco mas")
+#             if i==i:
+#                 print("ya no hay mas intentos")
+#       print("fin")
         
 
 # if contraseña==1234:
@@ -237,3 +235,126 @@ else:
 #     for contraseña in range(3):
 # else:
 #         print("error intentelo nuevamente")
+
+
+
+
+# --------------menus-----------
+
+
+
+# suma=1
+# resta=2
+# division=3
+# multiplicacion=4
+# salir=5
+
+
+# num1=0
+# num2=0
+
+# num3=0
+# num4=0
+
+# num5=0
+# num6=0
+
+# num7=0
+# num8=0
+
+
+# print("elija una opcion matematica")
+
+# print("suma=1")
+# print("resta=2")
+# print("division=3")
+# print("multiplicacion=4")
+# print("salir=5")
+
+# while True:
+    
+#     op=int(input("ingrese la opcion"))
+
+
+        
+#     if op==(1):
+#             print("ud eligio la suma")
+#             num1=int(input("ingrese el numero"))
+#             num2=int(input("ingrese el segundo numero"))
+#             print(num1+num2)
+#             print(f"el resultado es:", num1+num2)
+            
+#     if op==(2):
+#             print("ud eligio la resta")
+#             num3=int(input("ingrese el numero"))
+#             num4=int(input("ingrese el segundo numero"))
+#             print(num3-num4)
+#             print(f"el resultado es:", num3-num4)
+        
+#     if op==(3):
+#             print("ud eligio la division")
+#             num5=int(input("ingrese el numero"))
+#             num6=int(input("ingrese el segundo numero"))
+#             print(num5/num6)
+#             print(f"el resultado es:", num5/num6)
+            
+
+#     if op==(4):
+#             print("ud eligio la multiplicacion")
+#             num7=int(input("ingrese el numero"))
+#             num8=int(input("ingrese el segundo numero"))
+#             print(num7*num8)
+#             print(f"el resultado es:", num7*num8)
+#     if op==(5):
+#         print("salio del menu")
+#         break
+            
+            
+            
+            
+#     else:
+#             print("eliga otra opcion: ")
+        
+
+
+
+
+# num=7
+# def ver_par():
+#         if num>7 and num%2==0:
+#             print("el numero es positivo y par")
+#         else:
+#             print("el numero es positivo e impar")
+    
+    
+
+
+
+# ---------------while-------------------
+
+# num=0
+
+# while num<3:
+#     num=num+1
+#     print("iteracion", num)
+
+
+    
+    
+comida=100
+
+
+while comida!=0:
+    print("aun tiene comida en el plato")
+    print("va a comer una cucharada? (si/no)")
+    verifica=input()
+    if verifica=="si":
+        print("va a comer una cucharada")
+        comida=comida-25
+        print("ud ha sacado: ", comida , '%')
+        if comida==0:
+            print("ud ya se ha terminado toda la comida")
+            break
+        else:
+            print("ud no ha terminado la comida")
+    
