@@ -341,20 +341,128 @@
 
     
     
-comida=100
+# comida=100
 
 
-while comida!=0:
-    print("aun tiene comida en el plato")
-    print("va a comer una cucharada? (si/no)")
-    verifica=input()
-    if verifica=="si":
-        print("va a comer una cucharada")
-        comida=comida-25
-        print("ud ha sacado: ", comida , '%')
-        if comida==0:
-            print("ud ya se ha terminado toda la comida")
-            break
-        else:
-            print("ud no ha terminado la comida")
+# while comida!=0:
+#     print("aun tiene comida en el plato")
+#     print("va a comer una cucharada? (si/no)")
+#     verifica=input()
+#     if verifica=="si":
+#         print("va a comer una cucharada")
+#         comida=comida-25
+#         print("ud ha sacado: ", comida , '%')
+#         if comida==0:
+#             print("ud ya se ha terminado toda la comida")
+#             break
+#         else:
+#             print("ud no ha terminado la comida")
     
+# ------------ENSAYO DE LA PRUEBA DEL LUNES-------
+
+
+# 1. Crear un algoritmo que verifique la edad de un usuario y vea el costo del ticket
+# print("BIENVENIDO")
+
+# edad_usuario=(int(input("ingrese su edad")))
+
+# if edad_usuario>=10 and edad_usuario<=17:
+#     print("El valor del ticket es $1000 pesos")
+# elif edad_usuario>=18 and edad_usuario<=64:
+#     print("El costo de su ticket es $2000 pesos")
+# elif edad_usuario>=65:
+#     print("su ticket tiene un valor de $1500")
+# else:
+#     print("para todos los demas es gratis")
+    
+
+
+
+
+# 2. Ingresar 2 número y determinar cuál de ellos es el mayor 
+# num1=int(input("ingrese el primer numero"))
+# num2=int(input("ingrese el segundo numero"))
+
+# if num1>num2:
+#     print(f"el numero mayor de los dos es: {num1}")
+# elif num2>num1:
+#         print(f"el numero mayor es: {num2}") 
+# else:
+#         print("Ambos números son iguales")
+
+
+
+# 3. Escribe la tabla de multiplicación del 1 al 10 de un número ingresado por pantalla
+
+
+# num=int(input("ingresar un numero a mostrar para la tabla de * "))
+# for i in range(10):
+#     print(num ,"x",i+1,"=",(i+1)*num) 
+
+
+
+
+# 4. Realizar un algoritmo que permita llevar el control de las ventas de platos de comida que ofrece el restaurante
+
+print("bienvenido")
+
+print("ingresar nombre del cliente=1")
+print("mostrar menu de platos junto con sus precios=2")
+print("mostrar saludo al cliente=3")
+print("salir=4")
+
+
+total=0
+precio=0
+resultado=0
+
+while True:
+    op = int(input("Ingrese una opción: "))
+
+    if op == 1:
+        cliente = input("Escriba su nombre: ")
+        print("Hola", cliente, "que quiere elegir hoy?, eligiendo la segunda opcion le saldra el menu de platos")
+              
+        
+    elif op == 2:
+        print("Se mostrará el menú de platos con sus precios:")
+        print("5=Arroz a la francesa $4.500 ")
+        precio1=4500
+        print("6=Arroz marinero $5.200")
+        precio2=5200
+        print("7=Sopa marinera $9.700")
+        precio3=9700
+        
+        op2 = int(input("Ingrese una colacion: "))
+        if op2==5:
+            print(f"ud escogio arroz a la francesa y su precio es:{precio1}")
+            print("desea elegir otro plato?")
+            print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
+
+            total=total+precio1
+            print("su total",total)
+        elif op2==6:
+             print(f"ud escogio arroz marinero y su precio es:{precio2}")
+             print("desea elegir otro plato?")
+             print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
+
+             total=total+precio2
+             print("su total",total)
+        elif op2==7:
+             print(f"ud escogio sopa marinera y su precio es:{precio3}")
+             print("desea elegir otro plato?")
+             print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
+
+             total=total+precio3
+             print("su total",total)
+
+        
+    elif op==3:
+        print("Gracias", cliente, "por venir al restorant Panuchis")
+        print("ya puede escoger")
+    elif op == 4:
+        print("Salió del programa.")
+        break
+            
+    else:
+        print("Vuelva a elegir una opción válida.")
