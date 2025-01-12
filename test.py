@@ -199,34 +199,41 @@
     
     
     
-# passw=1234
+passw=1234
 
-# for i in range(3):
-#     pas=int(input("ingrese una contraseña"))
-#     if pas==passw:
-#         print("bienvenido")
-#         break
-#     else:
-#         print("ha fallado nuevamente")
-# else:
+for i in range(3):
+    nombre_usuario=input("ingrese su nombre de usuario: ")
+    pas=int(input("ingrese una contraseña:  "))
+    if pas==passw:
+        print("¡BIENVENIDO SEÑOR", nombre_usuario + "!", "INICIANDO SESION...")
+        break
+    else:
+        print("la contraseña no es valida...")
         
-#         print("no ha podido ingresar, error")
+else:
+        
+        print("no ha podido ingresar, error")
 
 
 # num=64
 
+
+
 # for i in range(3):
-#   cont=int(input("ingrese su numero"))
-#   if cont==num:
-#       print("su numero es correcto el numero es: ", num)
-#       break
-#       if cont>num:
+
+#     print(f"adivine el numero incognito")
+#     cont=int(input("ingrese su numero:  "))
+#     print("va en el intento", i+1)
+#     if cont==num:
+#       print("el numero ingresado es correcto y es: ", num)
+#       if cont>=num:
 #           print("el numero es mayor, baje un poco mas")
-#       if cont<num:
+#       if cont<=num:
 #             print("su numero es menor, suba un poco mas")
-#             if i==i:
-#                 print("ya no hay mas intentos")
-#       print("fin")
+# if i==i:
+#     print("ya no hay mas intentos")
+# else:
+#     print("fin")
         
 
 # if contraseña==1234:
@@ -404,65 +411,100 @@
 
 # 4. Realizar un algoritmo que permita llevar el control de las ventas de platos de comida que ofrece el restaurante
 
-print("bienvenido")
+# print("bienvenido")
 
-print("ingresar nombre del cliente=1")
-print("mostrar menu de platos junto con sus precios=2")
-print("mostrar saludo al cliente=3")
-print("salir=4")
+# print("ingresar nombre del cliente=1")
+# print("mostrar menu de platos junto con sus precios=2")
+# print("mostrar saludo al cliente=3")
+# print("salir=4")
 
 
-total=0
-precio=0
-resultado=0
+# total=0
+# precio=0
+# resultado=0
 
-while True:
-    op = int(input("Ingrese una opción: "))
+# while True:
+#     op = int(input("Ingrese una opción: "))
 
-    if op == 1:
-        cliente = input("Escriba su nombre: ")
-        print("Hola", cliente, "que quiere elegir hoy?, eligiendo la segunda opcion le saldra el menu de platos")
+#     if op == 1:
+#         cliente = input("Escriba su nombre: ")
+#         print("Hola", cliente, "que quiere elegir hoy?, eligiendo la segunda opcion le saldra el menu de platos")
               
         
-    elif op == 2:
-        print("Se mostrará el menú de platos con sus precios:")
-        print("5=Arroz a la francesa $4.500 ")
-        precio1=4500
-        print("6=Arroz marinero $5.200")
-        precio2=5200
-        print("7=Sopa marinera $9.700")
-        precio3=9700
+#     elif op == 2:
+#         print("Se mostrará el menú de platos con sus precios:")
+#         print("5=Arroz a la francesa $4.500 ")
+#         precio1=4500
+#         print("6=Arroz marinero $5.200")
+#         precio2=5200
+#         print("7=Sopa marinera $9.700")
+#         precio3=9700
         
-        op2 = int(input("Ingrese una colacion: "))
-        if op2==5:
-            print(f"ud escogio arroz a la francesa y su precio es:{precio1}")
-            print("desea elegir otro plato?")
-            print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
+#         op2 = int(input("Ingrese una colacion: "))
+#         if op2==5:
+#             print(f"ud escogio arroz a la francesa y su precio es:{precio1}")
+#             print("desea elegir otro plato?")
+#             print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
 
-            total=total+precio1
-            print("su total",total)
-        elif op2==6:
-             print(f"ud escogio arroz marinero y su precio es:{precio2}")
-             print("desea elegir otro plato?")
-             print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
+#             total=total+precio1
+#             print("su total",total)
+#         elif op2==6:
+#              print(f"ud escogio arroz marinero y su precio es:{precio2}")
+#              print("desea elegir otro plato?")
+#              print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
 
-             total=total+precio2
-             print("su total",total)
-        elif op2==7:
-             print(f"ud escogio sopa marinera y su precio es:{precio3}")
-             print("desea elegir otro plato?")
-             print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
+#              total=total+precio2
+#              print("su total",total)
+#         elif op2==7:
+#              print(f"ud escogio sopa marinera y su precio es:{precio3}")
+#              print("desea elegir otro plato?")
+#              print("para escoger otro plato debe elegir la opcion 2 nuevamente.")
 
-             total=total+precio3
-             print("su total",total)
+#              total=total+precio3
+#              print("su total",total)
 
         
-    elif op==3:
-        print("Gracias", cliente, "por venir al restorant Panuchis")
-        print("ya puede escoger")
-    elif op == 4:
-        print("Salió del programa.")
-        break
+#     elif op==3:
+#         print("Gracias", cliente, "por venir al restorant Panuchis")
+
+#     elif op == 4:
+#         print("Salió del programa.")
+#         break
             
-    else:
-        print("Vuelva a elegir una opción válida.")
+#     else:
+#         print("Vuelva a elegir una opción válida.")
+
+
+
+
+# ---------practica para estudiar en casa prueba--------
+
+
+# nombre=input("ingrese su nombre: ")
+# print("¡Hola", nombre ,"!")
+
+# Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética  (3+22⋅5)2
+
+# print(((3+2) / (2*5)) **2)
+
+# print("el resultado es:" , (((3+2) / (2*5)))**2)
+
+
+
+# horas_trabajo=int(input("ingresa tus horas trabajadas:  "))
+# coste_hora=int(input("ingresa lo que cobras por hora:   "))
+
+# paga = horas_trabajo * coste_hora
+
+# print("tu paga es:", paga)
+
+
+
+# ---imc----
+
+# peso_kg=int(input("ingrese su peso aqui:    "))
+# estatura_m=int(input("ingrese su estatura aqui: "))
+
+# imc=round(float(peso_kg)/float(estatura_m)**2.2)
+
+# print("tu indice de masa corporal es: "+str(imc))
