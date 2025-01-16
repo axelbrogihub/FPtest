@@ -540,6 +540,8 @@ else:
 #                     3.-Laptop
 #                     4.-Salir
 #                     """)
+
+
 #                 ops=int(input())
 #                 match ops:
 #                     case 1:
@@ -566,6 +568,172 @@ else:
 #         case _:
 #             print("seleccione una opcion valida 1-3")
 
+
+# ---------------definir funciones----------
+
+
+# def suma():   
+#     n1=int(input("ingrese el primer numero:    "))
+#     n2=int(input("ingrese el segundo numero:    "))
+#     print(n1+n2)
+    
+
+# def resta():
+#     n1=int(input("ingrese un numero:    "))
+#     n2=int(input("ingrese otro numero:  "))
+#     print("el resultado es:", n1-n2)
+    
+
+# def multi():
+#     n1=int(input("ingrese un numero:    "))
+#     n2=int(input("ingrese otro numero:  "))
+#     print("el resultado es:", n1*n2)
+    
+    
+# def division():
+#     n1=int(input("ingrese un numero:    "))
+#     n2=int(input("ingrese otro numero:  "))
+#     print("el resultado es:", n1/n2)
+    
+    
+
+    
+#     division()
+#     resta()
+#     suma()
+#     multi()
+
+
+
+# while True:
+#     print("suma=1")
+#     print("resta=2")
+#     print("multi=3")
+#     print("division=4")
+#     print("salir=5")
+    
+    
+    
+#     op=int(input("ingrese una opcion:   "))
+    
+#     match op:
+#         case 1:
+#             suma()
+#         case 2:
+#             resta()
+#         case 3:
+#             multi()
+#         case 4:
+#             division()
+#         case 5:
+#             print("salir")
+#             break
+#         case _:
+#             print("opcion valida")
+
+
+# num=6
+
+# if num>0 or num%2==0:
+#     print("el numero es positivo y es par")
+    
+# else:
+#     print("el numero no es positivo y no es par")
+
+
+
+# n_entrada=564
+# entrada=True
+# sitioEntrada="platea"
+
+
+# if n_entrada>300 and entrada==True and sitioEntrada=="platea":
+#     print("puede entrar a platea")
+# elif n_entrada>300 and entrada==True and sitioEntrada!="platea":
+#     print("puede entrar a galeria")
+# elif entrada==False:
+#     print("no puede entrar")
+    
+    
+
+
+# llave="blue"
+
+# if llave=="blue" or llave=="green":
+#     print("puede acceder")
+# else:
+#     print("no puede acceder")
+    
+    
+    
+    
+# Solicitar un número entero al usuario
+# altura = int(input("Introduce un número entero para la altura del triángulo: "))
+
+# # Imprimir el triángulo
+# for i in range(1, altura + 1):
+#     print('*' * i)
+
+
+
+# ----------------actividad de ingresar e iniciar sesion-----------
+
+
+
+usuarios = {}
+
+def registrar_usuario():
+
+    if len(usuarios) >= 3:
+        print("Ya se han registrado 3 usuarios")
+        return
+    
+    nombre_usuario = input("Ingrese el nombre de usuario (minimo 3 caracteres, maximo 12): ")
+    while len(nombre_usuario) < 3 or len(nombre_usuario) > 12:
+        nombre_usuario = input("Nombre de usuario no válido, Intentelo nuevamente: ")
+    
+    contrasena = input("Ingrese la contraseña (minimo 4 caracteres, maximo 10): ")
+    while len(contrasena) < 4 or len(contrasena) > 10:
+        contrasena = input("Contraseña no válida. Intente nuevamente: ")
+    
+    usuarios[nombre_usuario] = contrasena
+    print("Usuario registrado con exito.")
+
+def iniciar_sesion():
+
+    if not usuarios:
+        print("No hay usuarios registrados, registre usuarios primero...")
+        return
+    
+    nombre_usuario = input("Ingrese su nombre de usuario: ")
+    contrasena = input("Ingrese su contraseña: ")
+    
+    if usuarios.get(nombre_usuario) == contrasena:
+        print("Inicio de sesion exitoso.")
+    else:
+        print("Nombre de usuario o contraseña incorrectos.")
+
+def menu():
+    
+    while True:
+        print("\n1. Registrar usuario")
+        print("2. Iniciar sesión")
+        print("3. Salir")
+        
+        opcion = input("Seleccione una opcion: ")
+        
+        if opcion == '1':
+            registrar_usuario()
+        elif opcion == '2':
+            iniciar_sesion()
+        elif opcion == '3':
+            print("El usuario", nombre_usuario, "ha cerrado sesion.....")
+            break
+        else:
+            print("Opción no válida, intentelo nuevamente.")
+
+if __name__ == "__main__":
+    menu()
 
 
 
