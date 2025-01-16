@@ -508,3 +508,64 @@ else:
 # imc=round(float(peso_kg)/float(estatura_m)**2.2)
 
 # print("tu indice de masa corporal es: "+str(imc))
+
+
+
+# ----------------estructura del menu con "match" actividad tarjeta------------
+
+# deuda=100000
+
+# while True:
+#     print("""
+#           1.-pago de tarjeta credito
+#           2.-simulacion de compra
+#           3.-salir""")
+    
+#     op=int(input("ingrese la opcion que quiere escoger: "))
+#     match op:
+#         case 1:
+#             print("su deuda actual es:", deuda)
+#             print("ingrese el monto a pagar")
+#             pago = int(input("ingrese el pago que desea ingresar:   $"))
+#             if pago<=0 or pago>deuda:               #and es para que ambas partes se cumplan y or es para que una sola se pueda cumplir.
+#                 print("el pago debe ser mayor a cero y menor que la deuda")
+#             else:
+#                 deuda=deuda-pago
+#             print("El salgo a pagar es: ", deuda)
+#         case 2:
+#             while True:
+#                 print("""seleccione un item
+#                     1.-Monitor
+#                     2.-Teclado
+#                     3.-Laptop
+#                     4.-Salir
+#                     """)
+#                 ops=int(input())
+#                 match ops:
+#                     case 1:
+#                         valor=80000
+#                         deuda=valor+deuda
+#                         print("Usted añadio un nuevo articulo, su nuevo articulo es: ", deuda)
+#                     case 2:
+#                         teclado=50000
+#                         deuda=valor+deuda
+#                         print("Usted añadio un nuevo articulo, su nuevo articulo es: ", deuda)
+#                     case 3:
+#                         Laptop=1480000
+#                         deuda=valor+deuda
+#                         print("Usted añadio un nuevo articulo, su nuevo articulo es: ", deuda)
+#                     case 4:
+#                         print("gracias por su compra")
+#                         break
+#                     case _:
+#                         print("seleccione una opcion valida 1-3")
+                        
+#         case 3:
+#             print("gracias por usar el sistema de credito")
+#             break
+#         case _:
+#             print("seleccione una opcion valida 1-3")
+
+
+
+
