@@ -199,23 +199,23 @@
     
     
     
-passw=1234
+# passw=1234
 
-for i in range(3):
-    nombre_usuario=input("ingrese su nombre de usuario: ")
-    pas=int(input("ingrese una contraseña:  "))
-    if pas==passw:
-        print("¡BIENVENIDO SEÑOR", nombre_usuario + "!", "INICIANDO SESION...")
-        break
-    else:
-        print("la contraseña no es valida...")
+# for i in range(3):
+#     nombre_usuario=input("ingrese su nombre de usuario: ")
+#     pas=int(input("ingrese una contraseña:  "))
+#     if pas==passw:
+#         print("¡BIENVENIDO SEÑOR", nombre_usuario + "!", "INICIANDO SESION...")
+#         break
+#     else:
+#         print("la contraseña no es valida...")
         
-else:
+# else:
         
-        print("no ha podido ingresar, error")
+#         print("no ha podido ingresar, error")
 
 
-# num=64
+# # num=64
 
 
 
@@ -680,60 +680,178 @@ else:
 
 
 
-usuarios = {}
+# usuarios = {}
 
-def registrar_usuario():
+# def registrar_usuario():
 
-    if len(usuarios) >= 3:
-        print("Ya se han registrado 3 usuarios")
-        return
+#     if len(usuarios) >= 3:
+#         print("Ya se han registrado 3 usuarios")
+#         return
     
-    nombre_usuario = input("Ingrese el nombre de usuario (minimo 3 caracteres, maximo 12): ")
-    while len(nombre_usuario) < 3 or len(nombre_usuario) > 12:
-        nombre_usuario = input("Nombre de usuario no válido, Intentelo nuevamente: ")
+#     nombre_usuario = input("Ingrese el nombre de usuario (minimo 3 caracteres, maximo 12): ")
+#     while len(nombre_usuario) < 3 or len(nombre_usuario) > 12:
+#         nombre_usuario = input("Nombre de usuario no válido, Intentelo nuevamente: ")
     
-    contrasena = input("Ingrese la contraseña (minimo 4 caracteres, maximo 10): ")
-    while len(contrasena) < 4 or len(contrasena) > 10:
-        contrasena = input("Contraseña no válida. Intente nuevamente: ")
+#     contrasena = input("Ingrese la contraseña (minimo 4 caracteres, maximo 10): ")
+#     while len(contrasena) < 4 or len(contrasena) > 10:
+#         contrasena = input("Contraseña no válida. Intente nuevamente: ")
     
-    usuarios[nombre_usuario] = contrasena
-    print("Usuario registrado con exito.")
+#     usuarios[nombre_usuario] = contrasena
+#     print("Usuario registrado con exito.")
 
-def iniciar_sesion():
+# def iniciar_sesion():
 
-    if not usuarios:
-        print("No hay usuarios registrados, registre usuarios primero...")
-        return
+#     if not usuarios:
+#         print("No hay usuarios registrados, registre usuarios primero...")
+#         return
     
-    nombre_usuario = input("Ingrese su nombre de usuario: ")
-    contrasena = input("Ingrese su contraseña: ")
+#     nombre_usuario = input("Ingrese su nombre de usuario: ")
+#     contrasena = input("Ingrese su contraseña: ")
     
-    if usuarios.get(nombre_usuario) == contrasena:
-        print("Inicio de sesion exitoso.")
-    else:
-        print("Nombre de usuario o contraseña incorrectos.")
+#     if usuarios.get(nombre_usuario) == contrasena:
+#         print("Inicio de sesion exitoso.")
+#     else:
+#         print("Nombre de usuario o contraseña incorrectos.")
 
-def menu():
+# def menu():
     
-    while True:
-        print("\n1. Registrar usuario")
-        print("2. Iniciar sesión")
-        print("3. Salir")
+#     while True:
+#         print("\n1. Registrar usuario")
+#         print("2. Iniciar sesión")
+#         print("3. Salir")
         
-        opcion = input("Seleccione una opcion: ")
+#         opcion = input("Seleccione una opcion: ")
         
-        if opcion == '1':
-            registrar_usuario()
-        elif opcion == '2':
-            iniciar_sesion()
-        elif opcion == '3':
-            print("El usuario", nombre_usuario, "ha cerrado sesion.....")
-            break
-        else:
-            print("Opción no válida, intentelo nuevamente.")
+#         if opcion == '1':
+#             registrar_usuario()
+#         elif opcion == '2':
+#             iniciar_sesion()
+#         elif opcion == '3':
+#             print("El usuario", nombre_usuario, "ha cerrado sesion.....")
+#             break
+#         else:
+#             print("Opción no válida, intentelo nuevamente.")
 
-if __name__ == "__main__":
-    menu()
+# if __name__ == "__main__":
+#     menu()
+
+
+# ---------Actividad del juego de ludo---------
+
+
+# import random
+
+# def dado():
+#     return random.randint(1,6)
+
+
+# def lanzar_dado():
+#     return random.randint(1,6)
+
+# print(dado()*2)
+
+# posiciones=[0,0]
+
+
+# def jugador():
+#     return random.randint(1,2)
+
+# print("---------BIENVENIDO AL JUEGO DE LUDO---------")
+
+# print("cuantos jugadores son?")
+# jugadores=int(input("indica el numero de jugadores: "))
+
+# print("inicia el juego")
+
+# def mover_jugador(jugador):
+#     dado = lanzar_dado()
+#     posiciones[jugador] += dado
+#     if posiciones[jugador] > 24:
+#         posiciones[jugador] = 24
+#     print(f"Jugador {jugador + 1} lanzó un {dado} y está en la posición {posiciones[jugador]}")
+
+    
+
+# def hay_ganador():
+#     for i, posicion in enumerate (posiciones):
+#         if posicion == 24:
+#             print(f"¡Jugador {i + 1} ha ganado!")
+#             return True or False
+
+
+# turno = 0
+# while not hay_ganador():
+#     print(f"Turno del Jugador {turno + 1}")
+#     mover_jugador(turno)
+#     turno = (turno + 1) % 2
+
+# print("FIN DEL JUEGO")
+# print("¡GRACIAS POR JUGAR LUDO EN PYTHON...!")
+
+
+
+
+
+# -------ACTIVDAD DEL JUEGO DE LUDO 2, clase del 16 de enero---------
+
+# import random
+
+# def lanzar_dado():
+#     return random.randint(1, 6)
+
+
+
+
+
+# jugador1=1
+# jugador2=2
+# paso=0
+# paso2=0
+
+# while True:
+    
+
+#     print("---------¡¡¡BIENVENIDOS AL JUEGO DE LUDO!!!---------")
+
+#     print("---------------¡¡¡INICIA EL JUEGO!!!-----------")
+
+#     print("1.- jugador 1")
+#     print("2.- jugador 2")
+#     print("3.- Salir")
+    
+#     jugador=int(input("ingrese el jugador que quiere jugar: "))
+
+#     print("le toca al jugador", jugador)
+#     print("lanza el dado")
+    
+#     if jugador==jugador1:
+#         lado=lanzar_dado()
+#         print(f"el jugador 1 tiró y sacó: {lado}")
+#         paso=paso+lado
+#         print(f"el jugador 1 esta en la posicion: {paso} de 24")
+#         if paso==24:
+#             print("ha llegado a la meta")
+#             break
+#         if paso>=24:
+#             paso=24
+#             print("ha llegado a la meta")
+#             break
+
+#     elif jugador==jugador2:
+#         lado=lanzar_dado()
+#         print(f"el jugador 2 saco: {lado}")
+#         paso2=paso2+lado
+#         print(f"el jugador 2 esta en la posicion: {paso2}/24")
+#         if paso2==24:
+#             print("ha llegado a la meta")
+#             break
+#         if paso2>=24:
+#             paso2=24
+#             print("ha llegado a la meta")
+#             break
+#     elif jugador==3:
+#         print("gracias por jugar")
+#         break
 
 
 
