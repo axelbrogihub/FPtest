@@ -971,12 +971,9 @@ import random
 
 import time
 
-IVA=0,19
 
 carrito_compras=0
 
-comision_credito=1,5
-comision_debito=2,89
 
 print("*****bienvenido al sistema de ventas******")
 
@@ -986,11 +983,12 @@ print("a continuacion se mostrara el menu de opciones")
 while True:
     
     print(""" 
-        1.-\n Productos
+        1.-Productos
         2.-carrito de compras
-        3.- medio de pago
+        3.-medio de pago
         4.-boleta
-        5.- salir""")
+        5.-salir
+          """)
 
 
     op=int(input("ingrese una opcion para el menu de opciones a elegir:   "))
@@ -998,11 +996,13 @@ while True:
     match op:
             case 1:
                 print("******mostrara los productos disponibles*****")
+
                 print("""
                 1. Notebook HP omen: $750.000
                 2. Smart TV: $240.000
                 3. PS5 Slim:  $600.000
-                4. Tablet Samsung: $400.000""")
+                4. Tablet Samsung: $400.000
+                      """)
                 
                 
                 
@@ -1012,7 +1012,8 @@ while True:
                 1. Notebook HP omen: $750.000
                 2. Smart TV: $240.000
                 3. PS5 Slim:  $600.000
-                4. Tablet Samsung: $400.000""")
+                4. Tablet Samsung: $400.000
+                      """)
                 
                 producto=int(input("eliga un producto para el carrito de compras:   "))
                 
@@ -1056,11 +1057,11 @@ while True:
                 print("boleta")
                 print("ud ha escogido la boleta")
                 if op3==1:
-                    print("el total a pagar es: ", carrito_compras)
+                    print("el total a pagar es: ", round(carrito_compras))
                 elif op3==2:
-                    print("pagara con tarjeta credito y el total es: ", (carrito_compras*1.19)*1.0289)
+                    print("pagara con tarjeta credito y el total es: ", round((carrito_compras * 1.19) * 1.0289))
                 elif op3==3:
-                 print("pagara con tarjeta debito y el total es: ", (carrito_compras*1.19)*1.015)
+                    print("pagara con tarjeta debito y el total es: ", round((carrito_compras * 1.19)*1.015))
                 
             case 5:
                 print("SALIENDO DEL PROGRAMA....")
