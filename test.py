@@ -1058,9 +1058,9 @@ while True:
                 if op3==1:
                     print("el total a pagar es: ", carrito_compras)
                 elif op3==2:
-                    print("pagara con tarjeta credito y el total es: ", carrito_compras*(1.0289)+(1.19))
+                    print("pagara con tarjeta credito y el total es: ", (carrito_compras*1.19)*1.0289)
                 elif op3==3:
-                    print("pagara con tarjeta debito y el total es: ", carrito_compras*((1.015)+(1.19)))
+                 print("pagara con tarjeta debito y el total es: ", (carrito_compras*1.19)*1.015)
                 
             case 5:
                 print("SALIENDO DEL PROGRAMA....")
