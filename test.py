@@ -854,4 +854,229 @@
 #         break
 
 
+# -------actividad ruleta rusa-------
+
+# import random
+
+# jugador1=0
+# jugador2=0
+
+# def jugador():
+#     return random.randint(1,6)
+
+
+# def ruleta():
+#     return random.randint(1,6)
+
+# print("BIENVENIDO A LA RULETA RUSA")
+
+# print("inicio del juego")
+
+# for i in range(6):
+#     bala=ruleta()
+#     print("es el turno del jugador", i+1)
+#     print("Presiona 0 para disparar")
+#     disparo=int(input())
+#     if disparo==0:
+#         if bala==6:
+#             print(f"El jugador ha sido finao por la bala {bala}")
+#             break
+#         else:
+#             print("El jugador ha sobrevivido")
+#             print("Siguiente turno")
+#     else:
+#         print("Opcion incorrecta")
+#         break
+
+
+
+# --------actividad juego pelea----------
+
+# import random
+
+# import time
+
+
+# #creacion de funcion para la partida
+
+# def partida():
+
+#     player1=60
+#     player2=60
+
+
+#     print("BIENVENIDO AL JUEGO DE PELEAS")
+
+#     print("INICIO DEL JUEGO")
+
+
+
+#     print("Turno del jugador 1 para seleccionar el peleador")
+#     Nplayer1=input("ingrese el nombre del peleador: ")
+#     print("Turno del jugador 2")
+#     Nplayer2=input("ingrese el nombre del peleador: ")
+#     print("los jugadores comienzan con 60 hp")
+
+#     while True:
+    
+#         print(f"el {Nplayer1} tiene", player1)
+#         print(f"el {Nplayer2} tiene", player2)
+
+#     #ataca el jugador 1
+
+#         ataque1=ataque()
+#         print("el jugador 1 ataca con", ataque1)
+#         player2=player2-ataque1
+#         print("el jugador 2 tiene", player2)
+#         time.sleep(1)
+
+#     #ataca el jugador 2
+#         ataque2=ataque()
+#         print(f"el {Nplayer2} ataca con: ", ataque2)
+#         player1=player1-ataque2
+#         print(f"el {Nplayer1} tiene", player1)
+#         time.sleep(1)
+
+#         if player1<=0:
+#             print(f"el {Nplayer1}  ha perdido")
+#             break
+
+#         elif player2<=0:
+#             print(f"el {Nplayer2} ha perdido")
+#             break
+
+        
+
+#         elif player1<=0 and player2<=0:
+#             print("EMPATE")
+#             break
+
+#         else:
+#             print("el juego continua")
+
+# #definicion de ataque por jugador
+
+# def ataque():
+#     return random.randint(2,10)
+
+# #inicio de la partida
+
+# partida()
+
+
+
+# ----actividad clase del 20 de enero-----
+
+import random
+
+import time
+
+IVA=0,19
+
+carrito_compras=0
+
+comision_credito=1,5
+comision_debito=2,89
+
+print("*****bienvenido al sistema de ventas******")
+
+print("a continuacion se mostrara el menu de opciones")
+
+
+while True:
+    
+    print(""" 
+        1.-\n Productos
+        2.-carrito de compras
+        3.- medio de pago
+        4.-boleta
+        5.- salir""")
+
+
+    op=int(input("ingrese una opcion para el menu de opciones a elegir:   "))
+        
+    match op:
+            case 1:
+                print("******mostrara los productos disponibles*****")
+                print("""
+                1. Notebook HP omen: $750.000
+                2. Smart TV: $240.000
+                3. PS5 Slim:  $600.000
+                4. Tablet Samsung: $400.000""")
+                
+                
+                
+            case 2:
+                
+                print("""
+                1. Notebook HP omen: $750.000
+                2. Smart TV: $240.000
+                3. PS5 Slim:  $600.000
+                4. Tablet Samsung: $400.000""")
+                
+                producto=int(input("eliga un producto para el carrito de compras:   "))
+                
+                if producto==1:
+                    print(f"ud ha escogido el Notebook HP omen")
+                    carrito_compras=carrito_compras+750000
+            
+                if producto==2:
+                    print("ud ha escogido el Smart TV")
+                    carrito_compras=carrito_compras+240000
+                    
+                if producto==3:
+                    print("ud ha escogido el PS5 Slim")
+                    carrito_compras=carrito_compras+600000
+                    
+                if producto==4:
+                    print("ud ha escogido la Tablet Samsung")
+                    carrito_compras=carrito_compras+400000
+                
+            case 3:
+            
+                print("*****METODO DE PAGO*****")
+                print("1.-efectivo: sin IVA")
+                print("2.-tarjeta de credito: con IVA")
+                print("3.-tarjeta debito: con IVA")
+                
+                op3=int(input("ingrese una opcion para el metodo de pago:   "))
+                
+                if op3==1:
+                    print("ud ha escogido el metodo de pago en efectivo")
+                    
+                    
+                elif op3==2:
+                    print("ud ha escogido el metodo de pago con tarjeta de credito")
+                    
+                    
+                elif op3==3:
+                    print("ud ha escogido el metodo de pago con tarjeta debito")
+                    
+            case 4:
+                print("boleta")
+                print("ud ha escogido la boleta")
+                if op3==1:
+                    print("el total a pagar es: ", carrito_compras)
+                elif op3==2:
+                    print("pagara con tarjeta credito y el total es: ", carrito_compras*(1.0289)+(1.19))
+                elif op3==3:
+                    print("pagara con tarjeta debito y el total es: ", carrito_compras*((1.015)+(1.19)))
+                
+            case 5:
+                print("SALIENDO DEL PROGRAMA....")
+                break          
+            case _:
+                print("Seleccione una opcion válida")
+        
+                
+            
+            
+            
+        
+    
+    
+    
+
+
+
 
