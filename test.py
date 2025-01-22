@@ -967,107 +967,107 @@
 
 # ----actividad clase del 20 de enero-----
 
-import random
+# import random
 
-import time
-
-
-carrito_compras=0
+# import time
 
 
-print("*****bienvenido al sistema de ventas******")
-
-print("a continuacion se mostrara el menu de opciones")
+# carrito_compras=0
 
 
-while True:
+# print("*****bienvenido al sistema de ventas******")
+
+# print("a continuacion se mostrara el menu de opciones")
+
+
+# while True:
     
-    print(""" 
-        1.-Productos
-        2.-carrito de compras
-        3.-medio de pago
-        4.-boleta
-        5.-salir
-          """)
+#     print(""" 
+#         1.-Productos
+#         2.-carrito de compras
+#         3.-medio de pago
+#         4.-boleta
+#         5.-salir
+#           """)
 
 
-    op=int(input("ingrese una opcion para el menu de opciones a elegir:   "))
+#     op=int(input("ingrese una opcion para el menu de opciones a elegir:   "))
         
-    match op:
-            case 1:
-                print("******mostrara los productos disponibles*****")
+#     match op:
+#             case 1:
+#                 print("******mostrara los productos disponibles*****")
 
-                print("""
-                1. Notebook HP omen: $750.000
-                2. Smart TV: $240.000
-                3. PS5 Slim:  $600.000
-                4. Tablet Samsung: $400.000
-                      """)
+#                 print("""
+#                 1. Notebook HP omen: $750.000
+#                 2. Smart TV: $240.000
+#                 3. PS5 Slim:  $600.000
+#                 4. Tablet Samsung: $400.000
+#                       """)
                 
                 
                 
-            case 2:
+#             case 2:
                 
-                print("""
-                1. Notebook HP omen: $750.000
-                2. Smart TV: $240.000
-                3. PS5 Slim:  $600.000
-                4. Tablet Samsung: $400.000
-                      """)
+#                 print("""
+#                 1. Notebook HP omen: $750.000
+#                 2. Smart TV: $240.000
+#                 3. PS5 Slim:  $600.000
+#                 4. Tablet Samsung: $400.000
+#                       """)
                 
-                producto=int(input("eliga un producto para el carrito de compras:   "))
+#                 producto=int(input("eliga un producto para el carrito de compras:   "))
                 
-                if producto==1:
-                    print(f"ud ha escogido el Notebook HP omen")
-                    carrito_compras=carrito_compras+750000
+#                 if producto==1:
+#                     print(f"ud ha escogido el Notebook HP omen")
+#                     carrito_compras=carrito_compras+750000
             
-                if producto==2:
-                    print("ud ha escogido el Smart TV")
-                    carrito_compras=carrito_compras+240000
+#                 if producto==2:
+#                     print("ud ha escogido el Smart TV")
+#                     carrito_compras=carrito_compras+240000
                     
-                if producto==3:
-                    print("ud ha escogido el PS5 Slim")
-                    carrito_compras=carrito_compras+600000
+#                 if producto==3:
+#                     print("ud ha escogido el PS5 Slim")
+#                     carrito_compras=carrito_compras+600000
                     
-                if producto==4:
-                    print("ud ha escogido la Tablet Samsung")
-                    carrito_compras=carrito_compras+400000
+#                 if producto==4:
+#                     print("ud ha escogido la Tablet Samsung")
+#                     carrito_compras=carrito_compras+400000
                 
-            case 3:
+#             case 3:
             
-                print("*****METODO DE PAGO*****")
-                print("1.-efectivo: sin IVA")
-                print("2.-tarjeta de credito: con IVA")
-                print("3.-tarjeta debito: con IVA")
+#                 print("*****METODO DE PAGO*****")
+#                 print("1.-efectivo: sin IVA")
+#                 print("2.-tarjeta de credito: con IVA")
+#                 print("3.-tarjeta debito: con IVA")
                 
-                op3=int(input("ingrese una opcion para el metodo de pago:   "))
+#                 op3=int(input("ingrese una opcion para el metodo de pago:   "))
                 
-                if op3==1:
-                    print("ud ha escogido el metodo de pago en efectivo")
+#                 if op3==1:
+#                     print("ud ha escogido el metodo de pago en efectivo")
                     
                     
-                elif op3==2:
-                    print("ud ha escogido el metodo de pago con tarjeta de credito")
+#                 elif op3==2:
+#                     print("ud ha escogido el metodo de pago con tarjeta de credito")
                     
                     
-                elif op3==3:
-                    print("ud ha escogido el metodo de pago con tarjeta debito")
+#                 elif op3==3:
+#                     print("ud ha escogido el metodo de pago con tarjeta debito")
                     
-            case 4:
-                print("boleta")
-                print("ud ha escogido la boleta")
-                if op3==1:
-                    print("el total a pagar es: ", round(carrito_compras))
-                elif op3==2:
-                    print("pagara con tarjeta credito y el total es: ", round((carrito_compras * 1.19) * 1.0289))
-                elif op3==3:
-                    print("pagara con tarjeta debito y el total es: ", round((carrito_compras * 1.19)*1.015))
+#             case 4:
+#                 print("boleta")
+#                 print("ud ha escogido la boleta")
+#                 if op3==1:
+#                     print("el total a pagar es: ", round(carrito_compras))
+#                 elif op3==2:
+#                     print("pagara con tarjeta credito y el total es: ", round((carrito_compras * 1.19) * 1.0289))
+#                 elif op3==3:
+#                     print("pagara con tarjeta debito y el total es: ", round((carrito_compras * 1.19)*1.015))
                 
-            case 5:
-                print("SALIENDO DEL PROGRAMA....")
-                break          
-            case _:
-                print("Seleccione una opcion válida")
+#             case 5:
+#                 print("SALIENDO DEL PROGRAMA....")
+#                 break          
+#             case _:
+#                 print("Seleccione una opcion válida")
         
                 
             
@@ -1077,6 +1077,179 @@ while True:
     
     
     
+
+# ----prueba 2-------
+
+
+# print("*****BIENVENIDO AL SISTEMA DE VENTAS DE LA TIENDA****")
+
+# print("acontiunacion los productos que se encuentran en la tienda")
+
+
+
+# carrito_compra=0
+# while True:
+    
+#     print("""
+#         1.- Productos
+#         2.- carrito de compra
+#         3.- metodo de pago
+#         4.- boleta
+#         5.- salir""")
+
+#     while True:
+#         op=int(input("ingrese un numero para entrar al menu de cada opcion: "))
+        
+#         match op:
+#             case 1: 
+#                 if op==1:
+#                     print("a contiunacion los productos que se encuentran en la tienda")
+                
+#                     print("Cod/Producto/Precio")
+                
+#                     print("""
+#                     1.- 415/ arroz / $3150
+#                     2.- 818/ aceite / $1990
+#                     3.- 789 / queso / $2150
+#                     4.- 0207 / leche / $1190""")
+
+                    
+#             case 2:
+                
+#                 if op==2:
+                
+#                     print("***CARRITO DE COMPRA***")
+                    
+#                     print("""
+#                     415/ arroz / $3150
+#                     818/ aceite / $1990
+#                     789 / queso / $2150
+#                     189 / leche / $1190""")
+                    
+#                     producto=int(input("ingrese el codigo del producto que desea:   "))
+                    
+#                 if producto==415:
+#                     print("ud ha elegido el arroz:")
+#                     carrito_compra=carrito_compra+3150
+#                 if producto==818:
+#                     print("ud ha escogido aceite:")
+#                     carrito_compra=carrito_compra+1990
+#                 if producto==789:
+#                     print("ud ha elegido el queso:")
+#                     carrito_compra=carrito_compra+2150
+#                 elif producto==189:
+#                     print("ud ha elegido la leche:")
+#                     carrito_compra=carrito_compra+1190
+                    
+#             case 3:
+            
+#                 print("*****METODO DE PAGO*****")
+#                 print("1.-efectivo: sin IVA")
+#                 print("2.-tarjeta de credito: con IVA")
+#                 print("3.-tarjeta debito: con IVA")
+                
+#                 op3=int(input("ingrese una opcion para el metodo de pago:   "))
+                
+#                 if op3==1:
+#                     print("ud ha escogido el metodo de pago en efectivo")
+                    
+                    
+#                 elif op3==2:
+#                     print("ud ha escogido el metodo de pago con tarjeta de credito")
+                    
+                    
+#                 elif op3==3:
+#                     print("ud ha escogido el metodo de pago con tarjeta debito")
+                    
+#             case 4:
+#                 print("boleta")
+#                 print("ud ha escogido la boleta")
+#                 if op3==1:
+#                     print("el total a pagar es: ", round(carrito_compra))
+#                 elif op3==2:
+#                     print("pagara con tarjeta credito y el total es: $ ", round((carrito_compra * 1.19)))
+#                 elif op3==3:
+#                     print("pagara con tarjeta debito y el total es: $ ", round((carrito_compra * 1.19)))
+                
+#             case 5:
+#                 print("SALIENDO DEL PROGRAMA....")
+#                 break          
+#             case _:
+#                 print("Seleccione una opcion válida")
+        
+                
+                
+            
+    # EJERCICIO 2
+
+
+# while True:
+    
+#     try:     
+#         edadUser=int(input("ingrese su edad:    "))
+#         if 10<= edadUser <=80:
+#             print(f"edad valida: {edadUser}")
+#             break
+#         else:
+#             print("***********ERROR LA EDAD INGRESADA NO ES VALIDA***************")
+#     except ValueError:
+#         print("error: por favor ingresa una edad valida")
+        
+
+
+            
+     
+                
+## ejer 3
+                
+# num=int(input("ingrese un numero entero o positivo: "))
+
+# if num<=0:
+#         print("ingrese un numero positivo por favor")
+                        
+# else:
+#         pares=0
+#         impares=0
+                        
+# for i in range(1,num+1):
+#     if i % 2==0:
+
+#             pares+=1
+#     else:
+#             impares+=1
+            
+#             print(f"cantidad de numeros pares es: {pares}")
+            
+#             print(f"cantidad de numeros impares: {impares}")
+                    
+
+
+    #EJER 4
+
+nota=float(input("ingresa la nota:  "))
+        
+if nota>=65:
+            calificacion= "A"
+elif 50 <= nota <=64:
+            calificacion= "B"
+elif 40 <= nota <=49:
+            calificacion= "C"
+elif 30<= nota <=39:
+            calificacion= "D"
+else:
+    calificacionalificacion= "f"
+            
+print(f"calificacion: {calificacion}")
+            
+if calificacion in ["D", "F"]:
+    print("*****UD ESTA REPROBANDO*****")
+
+
+
+
+
+
+
 
 
 
