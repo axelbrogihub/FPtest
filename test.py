@@ -1226,23 +1226,35 @@
 
     #EJER 4
 
-nota=float(input("ingresa la nota:  "))
+# nota=float(input("ingresa la nota:  "))
         
-if nota>=65:
-            calificacion= "A"
-elif 50 <= nota <=64:
-            calificacion= "B"
-elif 40 <= nota <=49:
-            calificacion= "C"
-elif 30<= nota <=39:
-            calificacion= "D"
-else:
-    calificacionalificacion= "f"
+# if nota>=65:
+#             calificacion= "A"
+# elif 50 <= nota <=64:
+#             calificacion= "B"
+# elif 40 <= nota <=49:
+#             calificacion= "C"
+# elif 30<= nota <=39:
+#             calificacion= "D"
+# else:
+#     calificacionalificacion= "f"
             
-print(f"calificacion: {calificacion}")
+# print(f"calificacion: {calificacion}")
             
-if calificacion in ["D", "F"]:
-    print("*****UD ESTA REPROBANDO*****")
+# if calificacion in ["D", "F"]:
+#     print("*****UD ESTA REPROBANDO*****")
+
+
+
+
+
+# ----------clase del 23 de enero "listas"------------
+
+
+
+
+
+
 
 
 
