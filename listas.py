@@ -111,12 +111,4 @@ for i in range(len(carrito)):
     total=total+preciofruta[i]
     
 print("su total fue:    ", total, "vuelva pronto...", lista_nombre[sel])
-    
-    
-
-
-
-
-
-         
 
