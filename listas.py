@@ -1,8 +1,8 @@
 # #      0,1, 2, 3,4, 5
-lista=[1,76,65,9,7,54]
+# lista=[1,76,65,9,7,54]
 #     -6,-5,-4,-3,-2,-1
 
-print(lista)
+# print(lista)
 
 # lista.append("mario") para agregar un nombre
 
@@ -51,25 +51,72 @@ print(lista)
      
 #hacer una lista de frutas poner una fruta, eliminar otra y luego mostrar el resultado.
 
+#hacer una lista de nombres(3), usar una lista de frutas (5), crear el p
 
+# listaFruta=["Pera","Manzana","Platano","limon","naranja"]
+
+# print(listaFruta)
+
+# listaFruta.remove("Platano")
+
+
+# print(listaFruta)
+
+
+# listaFruta.insert(2,"kiwi")
+
+# print(listaFruta)
+
+
+     
+     
+print("BIENVENIDO AL LOCAL")
+
+
+
+lista_nombre=["Pedro", "Juan", "Diego"]
 
 listaFruta=["Pera","Manzana","Platano","limon","naranja"]
 
-print(listaFruta)
+contador=1
 
-listaFruta.remove("Platano")
+carrito=[]
+
+preciofruta=[900,800,700,1000,600]
+
+total=0
+
+print("quien va a comprar?:   ")
+
+for i in lista_nombre:
+    print(contador,".-",i)
+    contador+=1
+    
+sel=int(input())-1
+
+# print(lista_nombre[sel])
+
+print("bienvenido", lista_nombre[sel], "a la fruteria")
+
+while len(carrito)<3:
+    for fruta in range(len(listaFruta)):
+        print(fruta+1, ".-", listaFruta[fruta])
+    selfru=int(input("seleccione una fruta: "))-1
+    print("usted ha seleccionado", listaFruta[selfru]," y su precio es:  ", preciofruta[selfru])
+    carrito.append(selfru)
+    print(carrito)        
+print("Verduderia Pelayos")
+for i in range(len(carrito)):
+    print(f"",{listaFruta[i]},".....", preciofruta[i])
+    total=total+preciofruta[i]
+    
+print("su total fue:    ", total, "vuelva pronto...", lista_nombre[sel])
+    
+    
 
 
-print(listaFruta)
 
 
-listaFruta.insert(2,"kiwi")
-
-print(listaFruta)
-
-
-     
-     
 
          
 
