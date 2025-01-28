@@ -1,6 +1,6 @@
 # #      0,1, 2, 3,4, 5
-# lista=[1,76,65,9,7,54]
-#     -6,-5,-4,-3,-2,-1
+# lista=[1,76,65,9 "lol" ,7,54]
+#                   -3   -2 1-
 
 # print(lista)
 
@@ -19,7 +19,11 @@
 #lista.clear ()         para eliminar todos los elementos de la lista.
 
 #lista.index ()         muestra el indice del elemento que va en el argumento
-# lista.insert(3,"mario")
+
+
+
+
+#lista.insert(3,"mario")
 
 
 # print(lista)
@@ -257,21 +261,31 @@
 
 
 
-colo=[]
-u=[]
-op="1"
-while op!="0":
+# colo=[]
+# u=[]
+# op="1"
+# while op!="0":
     
-    print("A que equipo desea agregar?, para salir presione cero(0) ")
-    op=input()
-    if op=="colo":
-        numjugador=int(input("ingrese numero del jugador:   "))
-        colo.append(numjugador)
-    else:
-        numjugador=int(input("ingrese numero del jugador:   "))
-        u.append(numjugador)
+#     print("A que equipo desea agregar?, para salir presione cero(0) ")
+#     op=input()
+#     if op=="colo":
+#         numjugador=int(input("ingrese numero del jugador:   "))
+#         colo.append(numjugador)
+#     else:
+#         numjugador=int(input("ingrese numero del jugador:   "))
+#         u.append(numjugador)
         
         
-        print(colo)
-        print(u)
+#         print(colo)
+#         print(u)
         
+        
+
+nombres = []
+for i in range(3):
+    nombre = input(f"Ingrese el nombre {i+1}: ")
+    nombres.append(nombre)
+
+nombre_mayor_longitud = max(nombres, key=len)
+
+print(f"El nombre con mayor cantidad de caracteres es: {nombre_mayor_longitud}")
