@@ -62,6 +62,7 @@
 
 
 
+# CASO 1
 
 # Pedir al usuario que ingrese 3 nombres clase del 27 de enero
 
@@ -76,7 +77,9 @@
 # print(f"El nombre con mayor cantidad de caracteres es: {nombre_mayor_longitud}")
 
 
-# caso 2 
+# CASO 2
+
+# version lista
 
 # lista_nom=["axel","gonzalo","alvaro"]
 # lista_apell=["brogi","martinez","salas"]
@@ -86,15 +89,23 @@
 
 # for i in range(len(lista_nom)):
 #     print("el",car[i],"nombres es", lista_nom[i],lista_apell[i])
+    
+    
+# diccionario version
+
+# nombres={"axel":"brogi","gonzalo":"martinez","alvaro":"salas"}
+
+# for key, valor in nombres.items():
+#     print(f"{key} {valor}")
 
 
-#caso 3
+# CASO 3
 
 
 # nombres=[]
 
 # while True:
-#     pregunta=input("desea agregar algun otro nombre?, ingrese (si/no)   ")
+#     pregunta=input("desea agregar algun nombre?, ingrese (si/no)   ")
 #     if pregunta=="no":
 #         print("no se agregara otro nombre...")
 #         break

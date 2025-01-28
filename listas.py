@@ -280,6 +280,7 @@
 #         print(u)
         
         
+# Pedir al usuario que ingrese 3 nombres clase del 27 de enero
 
 nombres = []
 for i in range(3):
