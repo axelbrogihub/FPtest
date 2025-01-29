@@ -1,4 +1,4 @@
-# *****CLASE DEL 27 DE ENERO EMPEZANDO CON MATRICES Y LISTAS*****
+# *****CLASE DEL 27 DE ENERO EMPEZANDO CON MATRICES, LISTAS Y DICCIONARIOS*****
 
 #matriz es una lista compuesta por lista
 
@@ -29,11 +29,11 @@
 # # for i in m:
 # #     print(i)
 
-# #tuplas
+# TUPLAS
 
 # mi_tupla=(1,"dos",3.0)
 
-#diccionario
+#**EMPEZANDO CON DICCIONARIOS**
 
 # D={"NOMBRE": "Link", "fonos":
 # [
@@ -60,7 +60,7 @@
 #     print(f"{clave}=${valor}")
 
 
-
+# **ACTIVIDAD EN CLASE**
 
 # CASO 1
 
@@ -93,10 +93,9 @@
     
 # diccionario version
 
-# nombres={"axel":"brogi","gonzalo":"martinez","alvaro":"salas"}
-
-# for key, valor in nombres.items():
-#     print(f"{key} {valor}")
+nombres={"Axel":"Brogi","Gonzalo":"Martinez","Alvaro":"Salas"}
+for key, valor in nombres.items():
+ print(f"SU NOMBRE ES: {key} Y SU APELLIDO ES: {valor}")
 
 
 # CASO 3
@@ -126,13 +125,13 @@
 
 ### clase del 28 de enero archivos txt.
 
-fut=" Algo mas de texto por aca"
+# fut=" Algo mas de texto por aca"
 
-lista=["Mario", "Luigui", "Peach", "TOAD"]
+# lista=["Mario", "Luigui", "Peach", "TOAD"]
 
-with open('mi_archivo.txt', 'a') as archivo:
-    for i in lista:
-        archivo.write(f"{i}\n")
+# with open('mi_archivo.txt', 'a') as archivo:
+#     for i in lista:
+#         archivo.write(f"{i}\n")
     
     
 # archivo = open('mi_archivo.txt', 'r')
@@ -198,5 +197,52 @@ with open('mi_archivo.txt', 'a') as archivo:
 # print(personas)
 
 
-#boleta en archivo .txt
+#*****BOLETA EN ARCHIVO TXT*****
+
+# carrito=[]
+# f=["uva", "pera", "platano"]
+# pf=[1200, 1000, 1300]
+# t=0
+# while True:
+    
+#     print("""
+#           1.- Comprar
+#           2.- Pagar
+#           3.- Salir
+#           """)
+#     op=int(input("Seleccione una opcion"))
+#     match op:
+#         case 1:
+            
+            
+#             for i in range(len(f)):
+#                 print(i+1,".-",f[i] , "=$",pf[i] )
+#             sel=int(input("Selecciones los productos a comprar"))
+#             carrito.append(sel-1)
+#             print(carrito)   
+#         case 2:
+#             print
+#             print()
+#             with open('boleta.txt', 'a') as archivo:
+#                 archivo.write("Verdureria Guaton de la fruta\n")
+#                 archivo.write("-----------------------------\n")
+#                 for i in carrito:
+#                     archivo.write(f"{f[i]}***${pf[i]}\n")
+#                 archivo.write("-----------------------------\n")
+#                 for i in carrito:
+#                     t=t+pf[i]
+#                 t_iva=t*0.19
+#                 tt=t+t_iva
+#                 archivo.write(f"TOTAL {t}\n")
+#                 archivo.write(f"TOTAL IVA {t_iva}\n")
+#                 archivo.write(f"TOTAL a PAGAR {tt}\n")
+#                 archivo.write("Gracias por su compra\n")
+            
+                
+            
+#         case 3:
+#             break
+#         case _:
+#             print("Eleccion no valida, seleccione de 1-3")
+            
 
