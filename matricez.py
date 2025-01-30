@@ -516,3 +516,77 @@ while True:
 
 
 # menu()
+
+
+
+# Sistema de Gestión de Estacionamiento
+
+# Configuración inicial del estacionamiento
+filas = 6
+espacios_por_fila = 12
+estacionamiento = [["Disponible" for _ in range(espacios_por_fila)] for _ in range(filas)]
+tarifas = [3000, 3000] + [1500] * 4  # Tarifas para las primeras 2 filas y las restantes
+ventas_totales = 0
+
+# Funciones
+def mostrar_estado():
+    print("\nEstado del estacionamiento:")
+    for i, fila in enumerate(estacionamiento):
+        print(f"Fila {i+1}: {fila}")
+
+def reservar_estacionamiento():
+    global ventas_totales
+    fila = int(input("Ingrese el número de fila (1-6): ")) - 1
+    espacio = int(input("Ingrese el número de espacio (1-12): ")) - 1
+    if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
+        if estacionamiento[fila][espacio] == "Disponible":
+            estacionamiento[fila][espacio] = "Reservado"
+            ventas_totales += tarifas[fila]
+            print("Reserva realizada con éxito.")
+        else:
+            print("El espacio ya está reservado.")
+    else:
+        print("Ubicación inválida.")
+
+def anular_reserva():
+    fila = int(input("Ingrese el número de fila (1-6): ")) - 1
+    espacio = int(input("Ingrese el número de espacio (1-12): ")) - 1
+    if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
+        if estacionamiento[fila][espacio] == "Reservado":
+            estacionamiento[fila][espacio] = "Disponible"
+            print("Reserva anulada con éxito.")
+        else:
+            print("El espacio no está reservado.")
+    else:
+        print("Ubicación inválida.")
+
+def totalizar_ventas():
+    print(f"Las ventas totales del día son: ${ventas_totales}")
+
+# Menú principal
+def menu():
+    while True:
+        print("\nSistema de Gestión de Estacionamiento")
+        print("1. Reservar estacionamiento")
+        print("2. Anular reserva")
+        print("3. Ver estado del estacionamiento")
+        print("4. Totalizar ventas del día")
+        print("5. Salir")
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            reservar_estacionamiento()
+        elif opcion == "2":
+            anular_reserva()
+        elif opcion == "3":
+            mostrar_estado()
+        elif opcion == "4":
+            totalizar_ventas()
+        elif opcion == "5":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción inválida, intente nuevamente.")
+
+# Ejecutar el programa
+menu()
