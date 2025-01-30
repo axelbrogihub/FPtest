@@ -262,88 +262,257 @@
 # se debe mostrar habitaciones vacias y las que ya esta agendadas con el nombre de la persona en cuestion.
 
 
-hotel=[[],[],[],[],[],[]],
-[[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6],
-[1,2,3,4,5,6]
-]
-hotel = [['Vacia' for _ in range(6)] for _ in range(10)]
 
-costo_por_habitacion = 100  # Definir un costo por habitación ocupada
+# hotel = [['Vacia' for _ in range(6)] for _ in range(10)]
 
 
-print("**BIENVENIDO AL HOTEL GARGOLA**")
+# costo_por_habitacion = 100  # Definir un costo por habitación ocupada
 
-def agendar_habitacion():
-    piso = int(input("Ingrese el número de piso (1-10): ")) - 1
-    habitacion = int(input("Ingrese el número de habitación (1-6): ")) - 1
 
-    if hotel[piso][habitacion] == 'Vacia':
-        nombre = input("Ingrese su nombre: ")
-        hotel[piso][habitacion] = nombre
-        print(f"Habitación agendada exitosamente para {nombre}.")
-    else:
-        print("¡Advertencia! La habitación ya está ocupada.")
+# print("**BIENVENIDO AL HOTEL GARGOLA**")
 
-def ver_estado_hotel():
-    print("Estado del hotel:")
-    for i in range(10):
-        print(f"Piso {i+1}: ", end="")
-        for j in range(6):
-            if hotel[i][j] == 'Vacia':
-                print(f"Habitación {j+1}: Vacía", end="  ")
-            else:
-                print(f"Habitación {j+1}: {hotel[i][j]}", end="  ")
-        print()
+# def agendar_habitacion():
+#     piso = int(input("Ingrese el número de piso (1-10): ")) - 1
+#     habitacion = int(input("Ingrese el número de habitación (1-6): ")) - 1
 
-def verificar_disponibilidad():
-    habitaciones_vacias = 0
-    for i in range(10):
-        for j in range(6):
-            if hotel[i][j] == 'Vacia':
-                habitaciones_vacias += 1
-    print(f"Habitaciones disponibles: {habitaciones_vacias}")
+#     if hotel[piso][habitacion] == 'Vacia':
+#         nombre = input("Ingrese su nombre: ")
+#         hotel[piso][habitacion] = nombre
+#         print(f"Habitación agendada exitosamente para {nombre}.")
+#     else:
+#         print("¡Advertencia! La habitación ya está ocupada.")
 
-def monetizar():
-    total_recaudado = 0
-    for i in range(10):
-        for j in range(6):
-            if hotel[i][j] != 'Vacia':
-                total_recaudado += costo_por_habitacion
-    print(f"Total recaudado: ${total_recaudado}")
+# def ver_estado_hotel():
+#     print("Estado del hotel:")
+#     for i in range(10):
+#         print(f"Piso {i+1}: ", end="")
+#         for j in range(6):
+#             if hotel[i][j] == 'Vacia':
+#                 print(f"Habitación {j+1}: Vacía", end="  ")
+#             else:
+#                 print(f"Habitación {j+1}: {hotel[i][j]}", end="  ")
+#         print()
 
-def menu():
-    while True:
-        print("\n--- Menú ---")
-        print("1. Agendar habitación")
-        print("2. Ver estado del hotel")
-        print("3. Verificar disponibilidad de habitaciones")
-        print("4. Monetizar")
-        print("5. Salir")
+# def verificar_disponibilidad():
+#     habitaciones_vacias = 0
+#     for i in range(10):
+#         for j in range(6):
+#             if hotel[i][j] == 'Vacia':
+#                 habitaciones_vacias += 1
+#     print(f"Habitaciones disponibles: {habitaciones_vacias}")
+
+# def monetizar():
+#     total_recaudado = 0
+#     for i in range(10):
+#         for j in range(6):
+#             if hotel[i][j] != 'Vacia':
+#                 total_recaudado += costo_por_habitacion
+#     print(f"Total recaudado: ${total_recaudado}")
+
+# def menu():
+#     while True:
+#         print("\n--- Menú ---")
+#         print("1. Agendar habitación")
+#         print("2. Ver estado del hotel")
+#         print("3. Verificar disponibilidad de habitaciones")
+#         print("4. Monetizar")
+#         print("5. Salir")
         
-        opcion = int(input("Ingrese una opción: "))
+#         opcion = int(input("Ingrese una opción: "))
 
-        match opcion:
-            case 1:
-                agendar_habitacion()
-            case 2:
-                ver_estado_hotel()
-            case 3:
-                verificar_disponibilidad()
-            case 4:
-                monetizar()
-            case 5:
-                print("Saliendo del sistema...")
-                break
-            case _:
-                print("Opción no válida. Por favor intente de nuevo.")
+#         match opcion:
+#             case 1:
+#                 agendar_habitacion()
+#             case 2:
+#                 ver_estado_hotel()
+#             case 3:
+#                 verificar_disponibilidad()
+#             case 4:
+#                 monetizar()
+#             case 5:
+#                 print("Saliendo del sistema...")
+#                 break
+#             case _:
+#                 print("Opción no válida. Por favor intente de nuevo.")
 
-# Ejecutar el menú
-menu()
+# # Ejecutar el menú
+# menu()
+
+# actividad del hotel por profesor
+
+hotel = [
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+]
+t=0
+def resv(piso, num_habi, nombre):
+    if not hotel[piso][num_habi]:  # Verificar si la habitación está vacía
+        hotel[piso][num_habi] = nombre
+        print(f"Reserva realizada para {nombre} en el piso {piso}, habitación {num_habi}.")
+    else:
+        print(f"Estimado/a {nombre}, la habitación {num_habi} del piso {piso} se encuentra ocupada, redireccionando a menú principal.")
+
+def guardar_reserva(piso, num_habi, nombre):
+    with open("hotel.txt", "w") as archivo:
+        archivo.write(f"Su habitacion esta en el piso {piso+1}, numero {num_habi+1}. Gracias por su compra :D, {nombre}.")
+
+def saber(hotel):
+    for i, piso in enumerate(hotel):
+        for j, habitacion in enumerate(piso):
+            if not habitacion:
+                print(f"Habitación {j+1} del piso {i+1} está disponible.")
+            else:
+                print(f"Habitación {j+1} del piso {i+1} está lamentablemente ocupada.")
+                
+def monetizar(t):
+    for i, piso in enumerate(hotel):
+        for j, habitacion in enumerate(piso):
+            if habitacion:
+                if i>=0 and i<=2:
+                    t=t+78500
+                elif i>=3 and i<=6:
+                    t=t+90000
+                elif  i>=7 and i<=9:
+                    t=t+110000      
+    return t
+
+while True:
+    print("Bienvenido al hotel duocuc")
+    print("""
+ // ¿Qué desea hacer? //
+1. Reservar una habitación.
+2. Ver todas las habitaciones.
+3. Verificar disponibilidad de habitaciones.
+4. Monetizar
+5. Salir.
+    """)
+    op = int(input("Seleccione una opción: "))
+    match op:
+        case(1):
+            piso = int(input("Ingrese el piso: "))-1
+            num_habi = int(input("Ingrese el número de su habitación: "))-1
+            nombre = input("Ingrese su nombre para la reserva: ")
+            resv(piso, num_habi, nombre)
+            guardar_reserva(piso, num_habi, nombre)
+        case (2):
+            for piso in hotel:
+                print(piso)
+        case (3):
+            saber(hotel)    
+        case (4):
+            print("El total monetizado es ", (monetizar(t))*1.19)
+        case (5):
+            print("usted ha salido")
+            break
+        case (_):
+            print("opcion invalida ._.")
+
+
+#actividad de cine 
+
+
+# def reservar(matriz):
+#     try:
+#         asiento=int(input("Ingrese el asiento que desea reservar: "))
+
+
+#         for i in range (10):
+#             for e in range(10):
+
+#                 if asiento == matriz[i][e]:
+#                     print("Asiento disponible")
+#                     if matriz[i] == 0:
+#                         print(f"El precio del asiento {asiento} es {precio1} ")
+#                         print(f"El codigo de su asiento es {i},{e}")
+#                         asiento2=asiento
+#                         matriz[i][e]="XX"
+#                         menu()
+#                         break
+#                     elif matriz[i] == 1:
+#                         print(f"El precio del asiento {asiento} es {precio2} ")
+#                         print(f"El codigo de su asiento es {i},{e}")
+#                         matriz[i][e]="XX"
+#                         asiento2=asiento
+#                         menu()
+#                         break
+#                     else:
+#                         print(f"El precio del asiento {asiento} es {precio3} ")
+#                         print(f"El codigo de su asiento es {i},{e}")
+#                         matriz[i][e]="XX"
+#                         asiento2=asiento
+#                         menu()
+#                         break     
+#     except:
+#         print("Ingrese un asiento valido")
+
+# def buscar(matriz):
+#     print("A continuacion debera ingresar el codigo del asiento")
+#     num1=int(input("Ingrese el primer numero"))
+#     num2=int(input("Ingrese el segundo numero"))
+#     for i in range(10):
+#         for e in range(10):
+#             if matriz[i][e]==matriz[num1][num2]:
+#                 print(f"Su asiento es: {matriz[i][e]}")
+#                 menu()
+
+# def mostrar(matriz):
+#     for fila in range(10):
+#         for columna in range(10):
+#             if fila == 0 :
+#                 print(matriz[fila][columna], end=" ")
+#             elif columna == 9:
+#                 print(matriz[fila][columna], end="\n")
+#             else:
+#                 print(matriz[fila][columna], end="\t")
+#     menu()
+
+
+
+# def menu():
+#     print("Bienvenido Al Menu Del Cine")
+#     print("1.- Reservar Asiento")
+#     print("2.- Buscar Asiento")
+#     print("3.- Vizualizar Asientos")
+#     print("4.- Visualizar Ventas")
+#     print("5.- Guardar Informacion Del Dia")
+#     print("6.- Salir")
+
+#     op=int(input("Ingrese ina opcion: "))
+
+#     match op:
+#         case 1:
+#             reservar(cine)
+#         case 2:
+            
+#             buscar(cine)
+#         case 3:
+#             mostrar(cine)
+#         case 6:
+#             breakpoint
+
+# precio1=10000
+# precio2=18500
+# precio3=21500
+
+# cine=[[1,2,3,4,5,6,7,8,9,10],
+#       [11,12,13,14,15,16,17,18,19,20],
+#       [21,22,23,24,25,26,27,28,29,30],
+#       [31,32,33,34,35,36,37,38,39,40],
+#       [41,42,43,44,45,46,47,48,49,50],
+#       [51,52,53,54,55,56,57,58,59,60],
+#       [61,62,63,64,65,66,67,68,69,70],
+#       [71,72,73,74,75,76,77,78,79,80],
+#       [81,82,83,84,85,86,87,88,89,90],
+#       [91,92,93,94,95,96,97,98,99,100],
+#       ]
+
+
+# menu()

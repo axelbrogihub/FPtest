@@ -1,4 +1,7 @@
 # Definimos la matriz para el hotel, 10 pisos y 6 habitaciones por piso
+
+
+
 hotel = [['Vacia' for _ in range(6)] for _ in range(10)]
 costo_por_habitacion = 100  # Definir un costo por habitación ocupada
 
