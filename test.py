@@ -1,7 +1,7 @@
-nombre="Axel BROGI"
-edad=23
+#nombre="Axel BROGI"
+#edad=23
 
-print("Mi nombre es", nombre, "y mi edad es ", edad)
+#print("Mi nombre es", nombre, "y mi edad es ", edad)
 
 
 
