@@ -1,12 +1,14 @@
 # *****CLASE DEL 27 DE ENERO EMPEZANDO CON MATRICES, LISTAS Y DICCIONARIOS*****
 
-#matriz es una lista compuesta por lista
+# matriz es una lista compuesta por lista
 
-#       0         1          2
+    #   0         1          2
 
-#     0,1,3    0,1,2,3     0,1,2
-# m=[[2,7,5], [3,4,7,15], [9,1,2]]
+    # 0,1,3    0,1,2,3     0,1,2
+m=[[2,7,5], [3,4,7,15], [9,1,2]]
 
+m.reverse()
+print(m)
 
 
 
@@ -340,80 +342,80 @@
 
 # actividad del hotel por profesor
 
-hotel = [
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-    [[], [], [], [], [], [], ],
-]
-t=0
-def resv(piso, num_habi, nombre):
-    if not hotel[piso][num_habi]:  # Verificar si la habitación está vacía
-        hotel[piso][num_habi] = nombre
-        print(f"Reserva realizada para {nombre} en el piso {piso}, habitación {num_habi}.")
-    else:
-        print(f"Estimado/a {nombre}, la habitación {num_habi} del piso {piso} se encuentra ocupada, redireccionando a menú principal.")
+# hotel = [
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+#     [[], [], [], [], [], [], ],
+# ]
+# t=0
+# def resv(piso, num_habi, nombre):
+#     if not hotel[piso][num_habi]:  # Verificar si la habitación está vacía
+#         hotel[piso][num_habi] = nombre
+#         print(f"Reserva realizada para {nombre} en el piso {piso}, habitación {num_habi}.")
+#     else:
+#         print(f"Estimado/a {nombre}, la habitación {num_habi} del piso {piso} se encuentra ocupada, redireccionando a menú principal.")
 
-def guardar_reserva(piso, num_habi, nombre):
-    with open("hotel.txt", "w") as archivo:
-        archivo.write(f"Su habitacion esta en el piso {piso+1}, numero {num_habi+1}. Gracias por su compra :D, {nombre}.")
+# def guardar_reserva(piso, num_habi, nombre):
+#     with open("hotel.txt", "w") as archivo:
+#         archivo.write(f"Su habitacion esta en el piso {piso+1}, numero {num_habi+1}. Gracias por su compra :D, {nombre}.")
 
-def saber(hotel):
-    for i, piso in enumerate(hotel):
-        for j, habitacion in enumerate(piso):
-            if not habitacion:
-                print(f"Habitación {j+1} del piso {i+1} está disponible.")
-            else:
-                print(f"Habitación {j+1} del piso {i+1} está lamentablemente ocupada.")
+# def saber(hotel):
+#     for i, piso in enumerate(hotel):
+#         for j, habitacion in enumerate(piso):
+#             if not habitacion:
+#                 print(f"Habitación {j+1} del piso {i+1} está disponible.")
+#             else:
+#                 print(f"Habitación {j+1} del piso {i+1} está lamentablemente ocupada.")
                 
-def monetizar(t):
-    for i, piso in enumerate(hotel):
-        for j, habitacion in enumerate(piso):
-            if habitacion:
-                if i>=0 and i<=2:
-                    t=t+78500
-                elif i>=3 and i<=6:
-                    t=t+90000
-                elif  i>=7 and i<=9:
-                    t=t+110000      
-    return t
+# def monetizar(t):
+#     for i, piso in enumerate(hotel):
+#         for j, habitacion in enumerate(piso):
+#             if habitacion:
+#                 if i>=0 and i<=2:
+#                     t=t+78500
+#                 elif i>=3 and i<=6:
+#                     t=t+90000
+#                 elif  i>=7 and i<=9:
+#                     t=t+110000      
+#     return t
 
-while True:
-    print("Bienvenido al hotel duocuc")
-    print("""
- // ¿Qué desea hacer? //
-1. Reservar una habitación.
-2. Ver todas las habitaciones.
-3. Verificar disponibilidad de habitaciones.
-4. Monetizar
-5. Salir.
-    """)
-    op = int(input("Seleccione una opción: "))
-    match op:
-        case(1):
-            piso = int(input("Ingrese el piso: "))-1
-            num_habi = int(input("Ingrese el número de su habitación: "))-1
-            nombre = input("Ingrese su nombre para la reserva: ")
-            resv(piso, num_habi, nombre)
-            guardar_reserva(piso, num_habi, nombre)
-        case (2):
-            for piso in hotel:
-                print(piso)
-        case (3):
-            saber(hotel)    
-        case (4):
-            print("El total monetizado es ", (monetizar(t))*1.19)
-        case (5):
-            print("usted ha salido")
-            break
-        case (_):
-            print("opcion invalida ._.")
+# while True:
+#     print("Bienvenido al hotel duocuc")
+#     print("""
+#  // ¿Qué desea hacer? //
+# 1. Reservar una habitación.
+# 2. Ver todas las habitaciones.
+# 3. Verificar disponibilidad de habitaciones.
+# 4. Monetizar
+# 5. Salir.
+#     """)
+#     op = int(input("Seleccione una opción: "))
+#     match op:
+#         case(1):
+#             piso = int(input("Ingrese el piso: "))-1
+#             num_habi = int(input("Ingrese el número de su habitación: "))-1
+#             nombre = input("Ingrese su nombre para la reserva: ")
+#             resv(piso, num_habi, nombre)
+#             guardar_reserva(piso, num_habi, nombre)
+#         case (2):
+#             for piso in hotel:
+#                 print(piso)
+#         case (3):
+#             saber(hotel)    
+#         case (4):
+#             print("El total monetizado es ", (monetizar(t))*1.19)
+#         case (5):
+#             print("usted ha salido")
+#             break
+#         case (_):
+#             print("opcion invalida ._.")
 
 
 #actividad de cine 
@@ -522,71 +524,209 @@ while True:
 # Sistema de Gestión de Estacionamiento
 
 # Configuración inicial del estacionamiento
-filas = 6
-espacios_por_fila = 12
-estacionamiento = [["Disponible" for _ in range(espacios_por_fila)] for _ in range(filas)]
-tarifas = [3000, 3000] + [1500] * 4  # Tarifas para las primeras 2 filas y las restantes
-ventas_totales = 0
+# filas = 6
+# espacios_por_fila = 12
+# estacionamiento = [["Disponible" for _ in range(espacios_por_fila)] for _ in range(filas)]
+# tarifas = [3000, 3000] + [1500] * 4  # Tarifas para las primeras 2 filas y las restantes
+# ventas_totales = 0
 
-# Funciones
-def mostrar_estado():
-    print("\nEstado del estacionamiento:")
-    for i, fila in enumerate(estacionamiento):
-        print(f"Fila {i+1}: {fila}")
+# # Funciones
+# def mostrar_estado():
+#     print("\nEstado del estacionamiento:")
+#     for i, fila in enumerate(estacionamiento):
+#         print(f"Fila {i+1}: {fila}")
 
-def reservar_estacionamiento():
-    global ventas_totales
-    fila = int(input("Ingrese el número de fila (1-6): ")) - 1
-    espacio = int(input("Ingrese el número de espacio (1-12): ")) - 1
-    if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
-        if estacionamiento[fila][espacio] == "Disponible":
-            estacionamiento[fila][espacio] = "Reservado"
-            ventas_totales += tarifas[fila]
-            print("Reserva realizada con éxito.")
-        else:
-            print("El espacio ya está reservado.")
-    else:
-        print("Ubicación inválida.")
+# def reservar_estacionamiento():
+#     global ventas_totales
+#     fila = int(input("Ingrese el número de fila (1-6): ")) - 1
+#     espacio = int(input("Ingrese el número de espacio (1-12): ")) - 1
+#     if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
+#         if estacionamiento[fila][espacio] == "Disponible":
+#             estacionamiento[fila][espacio] = "Reservado"
+#             ventas_totales += tarifas[fila]
+#             print("Reserva realizada con éxito.")
+#         else:
+#             print("El espacio ya está reservado.")
+#     else:
+#         print("Ubicación inválida.")
 
-def anular_reserva():
-    fila = int(input("Ingrese el número de fila (1-6): ")) - 1
-    espacio = int(input("Ingrese el número de espacio (1-12): ")) - 1
-    if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
-        if estacionamiento[fila][espacio] == "Reservado":
-            estacionamiento[fila][espacio] = "Disponible"
-            print("Reserva anulada con éxito.")
-        else:
-            print("El espacio no está reservado.")
-    else:
-        print("Ubicación inválida.")
+# def anular_reserva():
+#     fila = int(input("Ingrese el número de fila (1-6): ")) - 1
+#     espacio = int(input("Ingrese el número de espacio (1-12): ")) - 1
+#     if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
+#         if estacionamiento[fila][espacio] == "Reservado":
+#             estacionamiento[fila][espacio] = "Disponible"
+#             print("Reserva anulada con éxito.")
+#         else:
+#             print("El espacio no está reservado.")
+#     else:
+#         print("Ubicación inválida.")
 
-def totalizar_ventas():
-    print(f"Las ventas totales del día son: ${ventas_totales}")
+# def totalizar_ventas():
+#     print(f"Las ventas totales del día son: ${ventas_totales}")
 
-# Menú principal
-def menu():
-    while True:
-        print("\nSistema de Gestión de Estacionamiento")
-        print("1. Reservar estacionamiento")
-        print("2. Anular reserva")
-        print("3. Ver estado del estacionamiento")
-        print("4. Totalizar ventas del día")
-        print("5. Salir")
-        opcion = input("Seleccione una opción: ")
+# # Menú principal
+# def menu():
+#     while True:
+#         print("\nSistema de Gestión de Estacionamiento")
+#         print("1. Reservar estacionamiento")
+#         print("2. Anular reserva")
+#         print("3. Ver estado del estacionamiento")
+#         print("4. Totalizar ventas del día")
+#         print("5. Salir")
+#         opcion = input("Seleccione una opción: ")
 
-        if opcion == "1":
-            reservar_estacionamiento()
-        elif opcion == "2":
-            anular_reserva()
-        elif opcion == "3":
-            mostrar_estado()
-        elif opcion == "4":
-            totalizar_ventas()
-        elif opcion == "5":
-            print("Saliendo del programa...")
-            break
-        else:
-            print("Opción inválida, intente nuevamente.")
+#         if opcion == "1":
+#             reservar_estacionamiento()
+#         elif opcion == "2":
+#             anular_reserva()
+#         elif opcion == "3":
+#             mostrar_estado()
+#         elif opcion == "4":
+#             totalizar_ventas()
+#         elif opcion == "5":
+#             print("Saliendo del programa...")
+#             break
+#         else:
+#             print("Opción inválida, intente nuevamente.")
 
-# Ejecutar el programa
-menu()
+# # Ejecutar el programa
+# menu()
+
+
+
+
+
+#ejercicio tipo prueba 
+# import json
+
+# filas = 6
+# espacios_por_fila = 12
+# estacionamiento = [["Disponible" for _ in range(espacios_por_fila)] for _ in range(filas)]
+# tarifas = [3000, 3000] + [1500] * 4    # tarifas para las dos primeras filas y las restantes...
+# ventas_totales = 0
+
+# personas = []
+
+# def mostrar_personas():
+#     if not personas:
+#         print("no habrán reservas")
+#     else:
+#         for persona in personas:
+#             print(f"Nombre: {persona['nombre']}, Lugar: {persona['lugar']}")
+
+# def mostrar_estado():
+#     print("\nEstado del estacionamiento:")
+#     for i, fila in enumerate(estacionamiento):
+#         print(f"Fila {i+1}: {fila}")
+
+# def guardar_datos():
+#     datos = {
+#         "estacionamiento": estacionamiento,
+#         "ventas_totales": ventas_totales,
+#         "personas": personas
+#     }
+#     with open("estacionamiento.json", "w") as archivo:
+#         json.dump(datos, archivo)
+
+# def cargar_datos():
+#     global ventas_totales
+#     try:
+#         with open("estacionamiento.json", "r") as archivo:
+#             datos = json.load(archivo)
+#             estacionamiento[:] = datos["estacionamiento"]
+#             ventas_totales = datos["ventas_totales"]
+#             personas.extend(datos["personas"])
+#     except FileNotFoundError:
+#         print("No se encontró un archivo anterior. Iniciando con datos vacíos.")
+
+# def reservar_estacionamiento():
+#     global ventas_totales
+#     fila = int(input("Ingrese el numero de fila (1-6): ")) - 1
+#     espacio = int(input("Ingrese el numero de espacio (1-12): ")) - 1
+#     nombre = input("Ingrese su nombre: ")
+#     lugar = input("Ingrese lugar del estacionamiento: ")
+#     personas.append({"nombre": nombre, "lugar": lugar})
+
+#     print(f"Reserva realizada para el señor: {nombre}")
+#     print("--------------------------------------------------------------------------------------------------------------------------")
+#     print(f"Usuario {nombre}, las 2 primeras filas tienen un valor de $3000 pesos por día y las restantes un 50% menos por día...")
+
+#     if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
+#         if estacionamiento[fila][espacio] == "Disponible":
+#             estacionamiento[fila][espacio] = "Reservado"
+#             ventas_totales += tarifas[fila]
+
+#             print("Reserva realizada con éxito")
+#             guardar_datos()
+#         else:
+#             print("El espacio ya está reservado...")
+#     else:
+#         print("***ERROR INVALIDO O UBICACION INVALIDA****")
+
+# def anular_reserva():
+#     fila = int(input("Ingrese el numero de fila (1-6): ")) - 1
+#     espacio = int(input("Ingrese el numero de espacio (1-12): ")) - 1
+#     if 0 <= fila < filas and 0 <= espacio < espacios_por_fila:
+#         if estacionamiento[fila][espacio] == "Reservado":
+#             estacionamiento[fila][espacio] = "Disponible"
+#             print("Reserva anulada con éxito...")
+#             guardar_datos()
+#         else:
+#             print("El espacio no está reservado")
+#     else:
+#         print("Error inválido")
+
+# def buscar_estacionamiento():
+#     codigo = input("Ingrese el código del estacionamiento: ")
+#     try:
+#         estado = "disponible"
+#         precio = 3000
+#         if codigo == "0101":
+#             print(f"Información sobre el espacio al buscar estacionamiento {codigo}")
+#             print(f"Estado: {estado}")
+#             print(f"Precio: $ {precio}")
+#         else:
+#             print("****Código inválido****")
+#     except ValueError:
+#         print("El formato es incorrecto")
+
+# def totalizar_ventas():
+#     global ventas_totales
+#     print(f"Las ventas totales del día son: $ {ventas_totales}")
+
+# def menu():
+#     cargar_datos()
+#     while True:
+#         print("****BIENVENIDO AL SISTEMA DE GESTION DEL ESTACIONAMIENTO****")
+#         print("-------------------------------------------------------------")
+#         print("1. Reservar estacionamiento")
+#         print("2. Buscar estacionamiento")
+#         print("3. Anular reserva")
+#         print("4. Ver estado de estacionamiento")
+#         print("5. Totalizar ventas")
+#         print("6. Mostrar personas")
+#         print("7. Salir")
+
+#         opcion = input("Seleccione una opción: ")
+
+#         if opcion == "1":
+#             reservar_estacionamiento()
+#         elif opcion == "2":
+#             buscar_estacionamiento()
+#         elif opcion == "3":
+#             anular_reserva()
+#         elif opcion == "4":
+#             mostrar_estado()
+#         elif opcion == "5":
+#             totalizar_ventas()
+#         elif opcion == "6":
+#             mostrar_personas()
+#         elif opcion == "7":
+#             print("****SALIENDO DEL PROGRAMA****\n")
+#             guardar_datos()
+#             break
+#         else:
+#             print("Opción inválida, vuelva a intentarlo.")
+
+# menu()
