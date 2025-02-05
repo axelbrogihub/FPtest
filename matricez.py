@@ -730,3 +730,115 @@ print(m)
 #             print("Opción inválida, vuelva a intentarlo.")
 
 # menu()
+
+
+import random
+import csv
+
+# Lista de empleados
+trabajadores = [
+    "Juan Pérez", "María García", "Carlos López", "Ana Martínez", 
+    "Pedro Rodríguez", "Laura Hernández", "Miguel Sánchez", "Isabel Gómez", 
+    "Francisco Díaz", "Elena Fernández"
+]
+
+# Función para asignar sueldos aleatorios
+def asignar_sueldos():
+    return {trabajador: random.randint(300000, 2500000) for trabajador in trabajadores}
+
+# Función para clasificar sueldos
+def clasificar_sueldos(sueldos):
+    clasificacion = {
+        "Menores a $800.000": {},
+        "Entre $800.000 y $2.000.000": {},
+        "Superiores a $2.000.000": {}
+    }
+    
+    for trabajador, sueldo in sueldos.items():
+        if sueldo < 800000:
+            clasificacion["Menores a $800.000"][trabajador] = sueldo
+        elif sueldo <= 2000000:
+            clasificacion["Entre $800.000 y $2.000.000"][trabajador] = sueldo
+        else:
+            clasificacion["Superiores a $2.000.000"][trabajador] = sueldo
+
+    return clasificacion
+
+# Función para mostrar estadísticas
+def ver_estadisticas(sueldos):
+    sueldos_lista = list(sueldos.values())
+    sueldo_max = max(sueldos_lista)
+    sueldo_min = min(sueldos_lista)
+    promedio = sum(sueldos_lista) / len(sueldos_lista)
+    
+    print("\n--- Estadísticas ---")
+    print(f"Sueldo más alto: ${sueldo_max}")
+    print(f"Sueldo más bajo: ${sueldo_min}")
+    print(f"Promedio de sueldos: ${promedio:.2f}")
+
+# Función para generar reporte de sueldos
+def generar_reporte(sueldos):
+    with open("reporte_sueldos.csv", "w", newline="") as archivo:
+        escritor = csv.writer(archivo)
+        escritor.writerow(["Nombre", "Sueldo Base", "Descuento Salud", "Descuento AFP", "Sueldo Líquido"])
+        
+        for trabajador, sueldo in sueldos.items():
+            descuento_salud = sueldo * 0.07
+            descuento_afp = sueldo * 0.12
+            sueldo_liquido = sueldo - descuento_salud - descuento_afp
+            escritor.writerow([trabajador, sueldo, descuento_salud, descuento_afp, sueldo_liquido])
+    
+    print("\nReporte generado: 'reporte_sueldos.csv'")
+
+# Función principal
+def main():
+    sueldos = {}
+    
+    while True:
+        print("\n--- Menú ---")
+        print("1. Asignar sueldos aleatorios")
+        print("2. Clasificar sueldos")
+        print("3. Ver estadísticas")
+        print("4. Generar reporte de sueldos")
+        print("5. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            sueldos = asignar_sueldos()
+            print("\nSueldos asignados correctamente.")
+
+        elif opcion == "2":
+            if sueldos:
+                clasificacion = clasificar_sueldos(sueldos)
+                for categoria, datos in clasificacion.items():
+                    print(f"\n{categoria} (Total: {len(datos)})")
+                    for nombre, sueldo in datos.items():
+                        print(f"{nombre}: ${sueldo}")
+            else:
+                print("\nDebe asignar los sueldos primero.")
+
+        elif opcion == "3":
+            if sueldos:
+                ver_estadisticas(sueldos)
+            else:
+                print("\nDebe asignar los sueldos primero.")
+
+        elif opcion == "4":
+            if sueldos:
+                generar_reporte(sueldos)
+            else:
+                print("\nDebe asignar los sueldos primero.")
+
+        elif opcion == "5":
+            print("\nFinalizando programa...")
+            print("Desarrollado por Carlos Vergara")
+            print("RUT 12.345.678-9")
+            break
+
+        else:
+            print("\nOpción no válida. Intente nuevamente.")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
