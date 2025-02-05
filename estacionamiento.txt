@@ -1,0 +1,8 @@
+Fila 1: ['Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible']
+Fila 2: ['Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible']
+Fila 3: ['Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible']
+Fila 4: ['Disponible', 'Disponible', 'Disponible', 'Reservado', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible']
+Fila 5: ['Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible']
+Fila 6: ['Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible', 'Disponible']
+Ventas totales: 3000
+Personas: [{'nombre': 'axel', 'lugar': '2'}, {'nombre': 'camila', 'lugar': '3'}]
